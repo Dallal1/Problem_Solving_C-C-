@@ -1,43 +1,26 @@
 #include <stdio.h>
 
-
 int main()
 {
-	int h;
-	int i;
+	int n, h;
+	int top = 0;
 
-	printf("Enter The Number Frend: ");
-	scanf("%d", &i);
-	printf("Enter The Higet: ");
-	scanf("%d", &h);
-	printf("%d %d\n", i, h);
-	
-	int n[i];
-	int l;
-	int top;
+	scanf ("%d %d", &n, &h);
 
-	top = 0;
-	l = 0;
-	for(int j = 0; j < i; j++)
+	for (int i = 0; i < n; i++)
 	{
-		scanf("%d", &n[j]);
-	}
-	while (n[l] != '\0')
-	{
-		if (n[l] > h)
+		int ai;
+		scanf ("%d", &ai);
+
+		if(ai > h)
 		{
-			top = top + 2;	
+			top += 2;
 		}
-		if (n[l] <= h)
+		else
 		{
-			top = top + 1;
+			top += 1;
 		}
-		l++;
 	}
-	for(int g = 0; g < i; g++)
-	{
-		printf ("%d ", n[g]);
-	}
-	printf ("\n%d", top);
+	printf ("%d", top);
 	return (0);
 }
