@@ -1,12 +1,13 @@
 #include <stdio.h>
-
+ 
 int main()
 {
-	double R, X;
-	
-	X = 3.141592653;
-	scanf ("%lf", &R);
-	printf("R: %.9lf\n", R);
-	printf ("%.9lf", (R * 2) * X);
-	return (0);
+    float r, x, re1, re2;
+    
+    x = 3.141592653;
+    scanf ("%f", &r);
+    re1 = r * r;
+    re2 = re1 * x;
+    printf ("%.9f", re2);
+    return (0);
 }
