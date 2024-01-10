@@ -5,13 +5,13 @@ int main() {
     scanf("%lld %lld %lld", &a, &b, &k);
 
     if (a % k == 0 && b % k == 0)
-        printf("Both\n");
+        printf("Both");
     else if (a % k == 0)
-        printf("Memo\n");
+        printf("Memo");
     else if (b % k == 0)
-        printf("Momo\n");
+        printf("Momo");
     else
-        printf("No One\n");
+        printf("No One");
 
     return 0;
 }
