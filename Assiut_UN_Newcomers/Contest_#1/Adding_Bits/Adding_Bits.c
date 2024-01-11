@@ -2,6 +2,19 @@
 
 int main()
 {
+	int a, b, c;
+
+	scanf ("%d %d", &a, &b);
+	c = a ^ b;
+	printf ("%d", c);
+	return (0);
+}
+/*
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
 	int a, b, ia, ia1, ib, ib1;
 	int ra[32];
 	int rb[32];
@@ -55,16 +68,36 @@ int main()
     if (leadingZeros) {
         printf("0");
     }
-	/*
-	for (int j = ia1 - 1; j >= 0; j--) 
+	int rab;
+	double all[32], p, n;
+
+	p = 2.0;
+	if(ia1 >= ib1)
+		rab = ia1;
+	else
+		rab = ib1;
+
+	for (int j = rab - 1; j >= 0; j--) 
 	{
-        printf("%d", ra[j]);
-    }
+        	printf("%d", resualt[j]);
+    	}
 	printf ("\n");
-	for (int j = ib1 - 1; j >= 0; j--) 
+	
+	for (int i = rab; i >= 0; i--)
 	{
-        printf("%d", rb[j]);
-    }
-	*/
+		all[i] = resualt[i] * pow(p, i);
+		//printf ("%.0lf", all[1]);
+	}
+	
+	double d = 0;
+	for (int i = 0; i <= rab - 1; i++)
+	{
+		d += all[i];
+		//printf ("%.0lf", all[1]);
+		//printf ("%.0lf", all[2]);
+		//printf ("%.0lf", all[3]);
+	}
+	printf ("%0.lf", d);
 	return (0);
 }
+*/
