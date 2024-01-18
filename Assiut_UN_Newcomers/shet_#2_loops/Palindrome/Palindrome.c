@@ -2,13 +2,15 @@
 
 int main ()
 {
-	char nums[10];
+	char nums[1];
 
-	scanf ("%c", &nums);
+	scanf ("%s", &nums);
 	
+	printf ("%s", nums[2]);
+	/*
 	for (int i = 0; i <= 3; i++)
 	{
-		printf ("%c",  nums[i]);
-	}
+		printf ("%d",  nums[i]);
+	}*/
 	return (0);
 }
