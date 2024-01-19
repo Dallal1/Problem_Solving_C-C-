@@ -2,15 +2,20 @@
 
 int main ()
 {
-	char nums[1];
-
-	scanf ("%s", &nums);
+	int result = 0;
+	int num, remainder;
 	
-	printf ("%s", nums[2]);
-	/*
-	for (int i = 0; i <= 3; i++)
+	scanf ("%d", &num);
+	int q = num;
+	while (q > 0)
 	{
-		printf ("%d",  nums[i]);
-	}*/
+		remainder = q % 10;
+		result = result * 10 + remainder;
+		q = q / 10;
+	}
+	if (result == num)
+		printf ("%d\nYES", result);
+	else
+		printf ("%d\nNO", result);
 	return (0);
 }
