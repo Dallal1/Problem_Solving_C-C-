@@ -1,15 +1,15 @@
 #include <stdio.h>
 
-void chek(int nums)
+void chek(long long nums)
 {
-	int p, digit;
+	long long p, digit;
 
 	p = nums;
 	digit = 0;
 	while (p != 0)
 	{
 		digit = p % 10;
-		printf ("%d ", digit);
+		printf ("%lld ", digit);
 		digit = 0;
 		p /= 10;
 	}
@@ -17,13 +17,13 @@ void chek(int nums)
 
 int main()
 {
-	int l, nums;
+	long long l, nums;
 
-	scanf ("%d", &l);
+	scanf ("%lld", &l);
 
 	while (l > 0)
 	{
-		scanf ("%d", &nums);
+		scanf ("%lld", &nums);
 		chek(nums);
 		printf ("\n");
 		l--;
