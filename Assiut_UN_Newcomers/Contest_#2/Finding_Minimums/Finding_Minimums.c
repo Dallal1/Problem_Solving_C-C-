@@ -2,24 +2,36 @@
 
 int main()
 {
-	int n, k, valu, size;
+	int n, k, valu, count, min, flag;
 
 	scanf ("%d %d", &n, &k);
-	
-	int arr[n];
-	size = 0;
-	for (int i = 0; i < n; i++)
+	flag = 0;
+	count = 0;
+
+	for (int i = 1; i <= n; i++)
 	{
-		scanf ("%d ", &valu);
-		arr[size] = valu;
-		size++;
-		if (size == (k-1))
+		scanf ("%d", &valu);
+		if (flag == 0)
 		{
-			for (int z = 0; z < i; z++)
+			min = valu;
+			flag = 1;
+			count++;
+		}
+		else
+		{
+			if (min > valu)
 			{
-				printf ("%d", arr[z]);
+				min = valu;
+				count++;
 			}
-			size = 0;
+			else
+				count++;
+		}
+		if (count == k || n == i)
+		{
+			printf ("%d ", min);
+			count = 0;
+			flag = 0;
 		}
 	}
 	return (0);
