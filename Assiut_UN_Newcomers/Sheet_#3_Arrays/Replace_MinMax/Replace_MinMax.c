@@ -10,13 +10,11 @@ int main()
 	sizeMax = 0;
 	min = 1;
 	max = 1;
-
 	// Add the Value In The Arr
 	for (int i = 0; i < n; i++)
 	{
 		scanf ("%d", &arr[i]);
 	}
-	// Giv my postion min numbrt
 	while (min < n)
 	{
 		if (arr[sizeMin] > arr[min])
@@ -24,9 +22,9 @@ int main()
 			sizeMin = min;
 			min++;
 		}
-		min++;
+		else
+			min++;
 	}
-	// Gin my potion max number
 	while (max < n)
 	{
 		if (arr[sizeMax] < arr[max])
@@ -34,15 +32,17 @@ int main()
 			sizeMax = max;
 			max++;
 		}
-		max++;
+		else
+			max++;
 	}
-	// Swap
-	//int temp = arr[sizeMin];
-	//arr[sizeMin] = arr[sizeMax];
-	//arr[sizeMax] = temp;
+	// Sawp Min And Max
+	int temp = arr[sizeMin];
+	arr[sizeMin] = arr[sizeMax];
+	arr[sizeMax] = temp;
+
 	for (int i = 0; i < n; i++)
 	{
-		printf ("%d ", &arr[i]);
+		printf ("%d ", arr[i]);
 	}
 
 	//printf ("%d %d", sizeMin, sizeMax);
