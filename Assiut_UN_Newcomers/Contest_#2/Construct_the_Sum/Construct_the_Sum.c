@@ -32,4 +32,6 @@ int main()
 		cout<<endl;
 		cou = 0;
 	}
+
+
 }
