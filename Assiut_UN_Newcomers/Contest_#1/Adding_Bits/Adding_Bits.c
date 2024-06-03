@@ -99,5 +99,6 @@ int main()
 	}
 	printf ("%0.lf", d);
 	return (0);
+
 }
 */
