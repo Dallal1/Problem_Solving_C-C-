@@ -9,4 +9,6 @@ int main()
 	printf ("%.2f", re);
 
 	return (0);
+
+
 }
