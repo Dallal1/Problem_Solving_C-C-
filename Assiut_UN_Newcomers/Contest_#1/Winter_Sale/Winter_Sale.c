@@ -8,5 +8,5 @@ int main()
 	re = p / (1 - (x / 100));
 	printf ("%.2f", re);
 
-	return (0);#
+	return (0);
 }
